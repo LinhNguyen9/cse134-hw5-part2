@@ -101,18 +101,18 @@ class WeatherWidget extends HTMLElement {
     // Determine the icon based on the weather condition
     let iconFileName;
     if (data.shortForecast.includes('Clear')) {
-      iconFileName = 'sun.png'; // Replace with your local clear weather icon file
+      iconFileName = 'sun.png'; 
     } else if (data.shortForecast.includes('Cloudy')) {
-      iconFileName = 'cloudy.png'; // Replace with your local cloudy weather icon file
+      iconFileName = 'cloudy.png'; 
     } else if (data.shortForecast.includes('Rain')) {
-      iconFileName = 'rain.png'; // Replace with your local rainy weather icon file
+      iconFileName = 'rain.png'; 
     } else {
-      iconFileName = 'default.png'; // Replace with your local default weather icon file
+      iconFileName = 'default.png'; 
     }
 
     // Create and append an icon for the weather condition
     const iconElement = document.createElement('img');
-    iconElement.src = `./icons/${iconFileName}`; // Path to your local icons directory
+    iconElement.src = `./icons/${iconFileName}`; 
     iconElement.alt = data.shortForecast;
     iconElement.classList.add('icon');
 
